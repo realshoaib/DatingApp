@@ -17,10 +17,13 @@
                     <a class="nav-link" (click)="logout()" href="#">Logout</a>
                 </li>
             </ng-container>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/errors' routerLinkActive>Errors</a>
+            </li>
         </ul>
 
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-            <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | uppercase}}</a>
+            <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a class="dropdown-item">Edit Profile</a>
                 <div class="dropdown-divider"></div>
