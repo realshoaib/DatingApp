@@ -17,10 +17,10 @@ export class AccountService {
 
   login(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(
-      map((response: any) => {
+      map((response: User) => {
         const user = response
         if (user) {
-          user.username = user.userName
+          user.userName = user.userName
           localStorage.setItem('user', JSON.stringify(user))
           this.currentUserSource.next(user)
         }
