@@ -1,7 +1,8 @@
 Step to migrate DatingApp to another PC:
 
-1. Check .csproj file in API & check if any package needs to be insalled and run "dotnet restore".
+1. Check .csproj file in API & check if any package needs to be installed and run "dotnet restore".
 2. Install C# extension, Nuget Gallery extension and from there install package EF Core, EF SqlServer, EF Design
 3. Change the connection string in appsetting.json to your server name in SqlServer. 
 4. Install (dotnet tool install --global dotnet-ef --version 5.0.7) from the official nuget.org site, (dotnet ef --version) 
    and run command "dotnet ef database update".
+5. Do check for the version of .NET installed on the machine as well and change it accordingly if database does not create
